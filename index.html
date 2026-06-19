@@ -24,27 +24,43 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.btn-play {
+			transition-duration: 2s;
+			transition-delay: 0.3s;
+		}
 
+		.btn-open {
+			box-shadow: 12px 14px 13px 0 rgb(0, 0, 0, 0.2);
+		}
+
+		.imgawal {
+			top: 20vh;
+			position: absolute;
+			width: 100vw;
+		}
+	</style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 <audio  id="laguKu">
-        <source src="audio/stin.ogg" type="audio/mpeg">
+        <source src="audio/stin.mp3" type="audio/mpeg">
         Browser Anda tidak mendukung elemen audio.
     </audio>
 
-    <div id="gat" class="btn-play" style="position: fixed; width: 100vw; height: 100vh; background: rgb(255, 104, 51); z-index: 1; opacity: 100%; justify-content: center; align-items: center;" onclick="putarAudio()">
-    	<button style="position: absolute; height: 10vh; width: 40vw; margin: 45vh 30vw; border-radius: 20px; border-style: solid; border-color: white; background: white; font-family: cursive ; color: rgb(255, 104, 51);" onclick="openi()"><b>BUKA UNDANGAN</b></button>
+    <div id="gat" class="btn-play" style="position: fixed; width: 100vw; height: 100vh; z-index: 1; background: rgb(255, 104, 51); opacity: 100%; justify-content: center; align-items: center;" onclick="putarAudio()">
+    	<div><img class="imgawal" src="images/7.jpeg"></div>
+    	<button class="btn-open" style="outline: none; position: absolute; height: 10vh; width: 40vw; margin: 45vh 30vw; border-radius: 20px; border-style: solid; border-color: white; background: white; font-family: cursive ; color: rgb(255, 104, 51);" onclick="openi()"><b>BUKA UNDANGAN</b></button>
     </div>
 
     <script>
     	function openi() {
-    		var x = document.getElementById("gat");
             var audio = document.getElementById("laguKu");
+            var x = document.getElementById("gat");
 
             // Menjalankan fungsi play() bawaan JavaScript
             audio.play();	
-    		x.style.display = "none";
+    		x.style.opacity = "0";
 
     	}
 
@@ -363,7 +379,7 @@
 
 
  <center>
- <button class="mapsna" onclick="location.href='https://maps.app.goo.gl/BY4A7NTpdS7gQshg8';">OPEN MAPS</button>
+ <button class="mapsna" onclick="location.href='https://maps.app.goo.gl/BY4A7NTpdS7gQshg8';" style=" background: white; color: rgb(255, 104, 51); border-color: rgb(255, 104, 51);;">OPEN MAPS</button>
 	</section>
 <!-- 
 	<section class="ftco-section bg-section" id="what-to-wear">
